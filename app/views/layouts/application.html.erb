@@ -6,7 +6,6 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
   <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   <%= javascript_importmap_tags %>
 </head>
@@ -15,7 +14,7 @@
 
 <header class="h-16 bg-green-300">
   <div class="h-full container flex justify-center items-center">
-    <span class="header-logo">Niawu</span>
+    <span class="header-logo"><%= link_to t("Niawu"), root_path %></span>
   </div>
 </header>
 

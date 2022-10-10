@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+
+Record.create :name => "Felinos"
+Animal.create :name => "Gato", :record_id => 1, :description => "Gato"
+Animal.create :name => "Leão", :record_id => 1,  :description => "Gato"
+Animal.create :name => "Onça", :record_id => 1,  :description => "Gato"
