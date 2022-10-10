@@ -78,6 +78,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rails (v7.0.4, ruby-3.1.2-p20 (2)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-dom-testing (v2.0.3, ruby-3.1.2-p20 (2)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-html-sanitizer (v1.4.3, ruby-3.1.2-p20 (2)) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails-i18n (v7.0.5, ruby-3.1.2-p20 (2)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v7.0.4, ruby-3.1.2-p20 (2)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v13.0.6, ruby-3.1.2-p20 (2)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="regexp_parser (v2.6.0, ruby-3.1.2-p20 (2)) [gem]" level="application" />
