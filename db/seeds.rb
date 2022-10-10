@@ -8,6 +8,11 @@
 
 
 Record.create :name => "Felinos"
-Animal.create :name => "Gato", :record_id => 1, :description => "Gato"
-Animal.create :name => "Leão", :record_id => 1,  :description => "Gato"
-Animal.create :name => "Onça", :record_id => 1,  :description => "Gato"
+Animal.create :name => "Gato", :record_id => 1, :description => I18n.t(:lorem)
+Animal.create :name => "Leão", :record_id => 1,  :description => I18n.t(:lorem)
+Animal.create :name => "Onça", :record_id => 1,  :description => I18n.t(:lorem)
+Animal.create :name => "Guepardo", :record_id => 1, :description => I18n.t(:lorem)
+Animal.create :name => "Jaguatirica", :record_id => 1,  :description => I18n.t(:lorem)
+Animal.create :name => "Puma", :record_id => 1,  :description => I18n.t(:lorem)
+Animal.create :name => "Caracal", :record_id => 1, :description => I18n.t(:lorem)
+Animal.create :name => "Tigre", :record_id => 1,  :description => I18n.t(:lorem)

@@ -15,3 +15,7 @@
 .header-logo {
   @apply text-2xl text-center;
 }
+
+.link {
+  @apply text-green-600 hover:text-green-900 hover:underline;
+}

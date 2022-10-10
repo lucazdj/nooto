@@ -1,0 +1,22 @@
+<div class="w-full">
+  <% if notice.present? %>
+    <p id="notice"><%= notice %></p>
+  <% end %>
+
+  <div id="animals" class="min-w-full">
+    <%= render @animals %>
+  </div>
+</div>
+
+<ul class="grid grid-cols-3 gap-3">
+  <% @animals.each do |animal| %>
+    <li class="shadow rounded p-3 bg-white">
+      <p><%= animal.id %></p>
+      <p><%= animal.name %></p>
+      <p><%= animal.description %></p>
+      <%= link_to t(:read), animals_read_path(animal.id), class: 'link' %>
+      <%= link_to t(:update), animals_update_path(animal.id), class: 'link' %>
+      <%= link_to t(:delete), animals_delete_path(animal.id), class: 'link' %>
+    </li>
+  <% end %>
+</ul>

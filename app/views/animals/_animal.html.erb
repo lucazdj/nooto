@@ -1,0 +1,7 @@
+<div id="<%= dom_id animal %>">
+  <% if action_name != "show" %>
+    <%= link_to "Show this animal", animal, class: "link" %>
+    <%= link_to 'Edit this animal', edit_animal_path(animal), class: "link" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

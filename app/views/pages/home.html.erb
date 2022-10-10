@@ -1,17 +1,5 @@
-<div>
-  <h1 class="font-bold text-4xl">Vem aí</h1>
-  <p>Só para gatinhos 😺</p>
+<div class="w-full">
 
-  <% @animals.each do |animal| %>
-    <ul>
-      <li><%= animal.id %></li>
-      <li><%= animal.name %></li>
-    </ul>
-  <% end %>
-
-  <button><%= link_to t("Create"), animal_create_path %></button>
-  <button><%= link_to t("Read"), animal_read_path %></button>
-  <button><%= link_to t("Update"), animal_update_path %></button>
-  <button><%= link_to t("Delete"), animal_delete_path %></button>
+  <%= render 'animals/index' %>
 
 </div>

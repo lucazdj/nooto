@@ -30,9 +30,10 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 pt-BR:
-  Niawu: "Niawu"
-  Olá: "Olá"
-  Create: "Adicionar"
-  Read: "Ver"
-  Update: "Editar"
-  Delete: "Apagar"
+  lorem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Montes nascetur ridiculus mus mauris vitae. Pretium fusce id velit ut tortor pretium viverra suspendisse. Habitasse platea dictumst vestibulum rhoncus."
+  app_name: "Niawu"
+  hello: "Olá"
+  create: "Adicionar"
+  read: "Ver"
+  update: "Editar"
+  delete: "Apagar"
