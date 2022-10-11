@@ -17,7 +17,7 @@ module Niawu
     # in config/environments, which are processed later.
     #
     config.time_zone = "America/Manaus"
-    config.i18n.available_locales = [:en, :"pt-BR"]
+    config.i18n.available_locales = [:"pt-BR"]
     config.i18n.default_locale = :"pt-BR"
 
     # config.eager_load_paths << Rails.root.join("extras")

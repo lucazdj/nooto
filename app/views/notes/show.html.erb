@@ -1,0 +1,25 @@
+<div class="mx-auto md:w-2/3 w-full flex">
+  <div class="mx-auto">
+    <% if notice.present? %>
+      <p class="notice" id="notice"><%= notice %></p>
+    <% end %>
+
+    <%= turbo_frame_tag "modal" do %>
+      <dialog data-action="click->modal#close" class="bg-slate-900/50 absolute w-screen h-screen" open>
+        <div class="max-w-md mx-auto">
+          <%= render @note %>
+        </div>
+      </dialog>
+    <% end %>
+
+    <div class="flex gap-2">
+
+      <%= link_to t(:edit), edit_note_path(@note), class: "button-primary" %>
+
+      <%= button_to t(:delete), note_path(@note), method: :delete, class: "button-outline-primary" %>
+
+      <%= link_to t(:return), notes_path, class: "button-outline-primary" %>
+
+    </div>
+  </div>
+</div>

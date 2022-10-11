@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="<%= I18n.locale %>">
 <head>
-  <title>Niawu</title>
+  <title><%= t(:app_name) %></title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
@@ -10,7 +10,9 @@
   <%= javascript_importmap_tags %>
 </head>
 
-<body class="flex flex-col h-screen bg-lime-50">
+<body class="flex flex-col h-screen bg-emerald-50">
+
+<%= turbo_frame_tag "modal", class: "contents", "data-controller": "modal" %>
 
 <header class="h-16 shrink-0 bg-green-300">
   <div class="h-full container flex justify-center items-center">
@@ -18,7 +20,7 @@
   </div>
 </header>
 
-<main class="container grow mx-auto mt-16 px-3 flex">
+<main class="container grow mt-16 px-3 flex">
   <%= yield %>
 </main>
 

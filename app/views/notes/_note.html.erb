@@ -1,0 +1,13 @@
+<div id="<%= dom_id note %>" class="flex flex-col gap-2 shadow rounded bg-emerald-200 p-5">
+
+  <strong><%= note.title %></strong>
+
+  <%= note.content %>
+
+  <% if action_name != "show" %>
+    <div class="flex gap-2">
+      <%= link_to t(:show), note, data: { turbo_frame: 'modal' }, class: "button-outline-primary" %>
+      <%= link_to t(:edit), edit_note_path(note), class: "button-outline-primary" %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,14 @@
+<div class="w-full">
+  <% if notice.present? %>
+    <p class="notice" id="notice"><%= notice %></p>
+  <% end %>
+
+  <div class="flex justify-between items-center mb-8">
+    <h1 class="font-bold text-4xl"><%= t(:notes) %></h1>
+    <%= link_to t(:new_), new_note_path, class: "button-outline-primary" %>
+  </div>
+
+  <div id="notes" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+    <%= render @notes %>
+  </div>
+</div>

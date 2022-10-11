@@ -31,9 +31,15 @@
 
 pt-BR:
   lorem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Montes nascetur ridiculus mus mauris vitae. Pretium fusce id velit ut tortor pretium viverra suspendisse. Habitasse platea dictumst vestibulum rhoncus."
-  app_name: "Niawu"
+  app_name: "Notas"
   hello: "Olá"
-  create: "Adicionar"
+  create: "Criar"
   read: "Ver"
   update: "Editar"
   delete: "Apagar"
+  return: "Voltar"
+  new: "Novo"
+  new_: "Nova"
+  edit: "Editar"
+  show: "Ver"
+  notes: "Notas"
