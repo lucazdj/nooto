@@ -24,7 +24,7 @@
   <%= yield %>
 </main>
 
-<%= turbo_frame_tag "notice", class: "contents", data: { controller: "notice" } %>
+<%= tag.div "notice", class: "contents", data: { controller: "notice" } %>
 
 <footer class="h-16 shrink-0 bg-green-300">
   <div class="h-full container flex justify-center items-center">

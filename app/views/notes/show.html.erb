@@ -7,9 +7,6 @@
 <% end %>
 
 <% if notice.present? %>
-  <%= turbo_frame_tag "notice" do %>
-    <%= tag.div role: "alert", id: "notice", class: "notice" do %>
-      <p><%= notice %></p>
-    <% end %>
-  <% end %>
+  <p><%= notice %></p>
 <% end %>
+

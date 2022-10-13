@@ -26,7 +26,7 @@ class NotesController < ApplicationController
 
     respond_to do |format|
       if @note.save
-        format.turbo_stream { render turbo_stream: turbo_stream.prepend('notes', partial: 'notes/note', locals: { note: @note }) }
+        format.turbo_stream { render turbo_stream: turbo_stream.append('notes', partial: 'notes/note', locals: { note: @note }) }
         format.html { redirect_to note_url(@note), notice: "Note was successfully created." }
         format.json { render :show, status: :created, location: @note }
       else
@@ -40,7 +40,8 @@ class NotesController < ApplicationController
   def update
     respond_to do |format|
       if @note.update(note_params)
-        format.html { redirect_to note_url(@note), notice: "Note was successfully updated." }
+        format.turbo_stream { render turbo_stream: turbo_stream.replace(@note) }
+        format.html { redirect_to note_url(@note), notice: I18n.t(:note_updated) }
         format.json { render :show, status: :ok, location: @note }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -54,6 +55,7 @@ class NotesController < ApplicationController
     @note.destroy
 
     respond_to do |format|
+      format.turbo_stream { render turbo_stream: turbo_stream.remove(@note) }
       format.html { redirect_to notes_url, notice: I18n.t(:note_deleted) }
       format.json { head :no_content }
     end
