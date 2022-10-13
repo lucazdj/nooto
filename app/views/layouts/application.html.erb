@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-  <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "tailwind", data: { turbo_track: "reload" } %>
+  <%= stylesheet_link_tag "application", data: { turbo_track: "reload" } %>
   <%= javascript_importmap_tags %>
 </head>
 
 <body class="flex flex-col h-screen bg-emerald-50">
 
-<%= turbo_frame_tag "modal", class: "contents", "data-controller": "modal" %>
+<%= turbo_frame_tag "modal", class: "contents", data: { controller: "modal" } %>
 
 <header class="h-16 shrink-0 bg-green-300">
   <div class="h-full container flex justify-center items-center">
@@ -20,9 +20,11 @@
   </div>
 </header>
 
-<main class="container grow mt-16 px-3 flex">
+<main class="container grow my-16 flex">
   <%= yield %>
 </main>
+
+<%= turbo_frame_tag "notice", class: "contents", data: { controller: "notice" } %>
 
 <footer class="h-16 shrink-0 bg-green-300">
   <div class="h-full container flex justify-center items-center">

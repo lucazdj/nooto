@@ -1,8 +1,8 @@
-<div class="mx-auto md:w-2/3 w-full">
-  <h1 class="font-bold text-4xl"><%= t(:edit) %></h1>
-
-  <%= render "form", note: @note %>
-
-  <%= link_to t(:show), @note, data: { turbo_frame: 'modal' }, class: "button-outline-primary" %>
-  <%= link_to t(:return), notes_path, class: "button-outline-primary" %>
-</div>
+<%= turbo_frame_tag "modal" do %>
+  <%= tag.dialog data: { action: "click->modal#close", modal_target: "dialog" }, class: "dialog", open: true do %>
+    <div class="flex flex-col gap-2 shadow rounded bg-emerald-200 p-5 max-w-md mx-auto">
+      <h1 class="font-bold text-4xl"><%= t(:edit) %></h1>
+      <%= render "form", note: @note %>
+    </div>
+  <% end %>
+<% end %>

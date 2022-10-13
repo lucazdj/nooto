@@ -4,10 +4,12 @@
 
   <%= note.content %>
 
-  <% if action_name != "show" %>
-    <div class="flex gap-2">
+  <div class="flex gap-2">
+    <% if action_name != "show" %>
       <%= link_to t(:show), note, data: { turbo_frame: 'modal' }, class: "button-outline-primary" %>
-      <%= link_to t(:edit), edit_note_path(note), class: "button-outline-primary" %>
-    </div>
-  <% end %>
+    <% end %>
+    <%= link_to t(:edit), edit_note_path(note), data: { turbo_frame: "modal" }, class: "button-outline-primary" %>
+    <%= button_to t(:delete), note_path(note), data: { turbo_frame: "notice" }, method: :delete, class: "button-outline-primary" %>
+  </div>
+
 </div>
