@@ -11,12 +11,23 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2022_10_11_180404) do
+  create_table "animals", force: :cascade do |t|
+    t.string "name", limit: 32, null: false
+    t.integer "record_id"
+    t.text "description"
+    t.datetime "created_at", precision: nil
+  end
+
   create_table "notes", force: :cascade do |t|
     t.string "title"
     t.string "content"
     t.string "author"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "records", force: :cascade do |t|
+    t.string "name"
   end
 
 end

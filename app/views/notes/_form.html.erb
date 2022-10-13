@@ -23,10 +23,10 @@
 
   <div class="my-5">
     <%= form.label :author %>
-    <%= form.text_field :author, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.text_field :author, class: "form-text-field" %>
   </div>
 
   <div class="inline">
-    <%= form.submit t(:create), class: "button-primary" %>
+    <%= form.submit t(:create), data: { turbo_frame: 'modal' }, class: "button-primary" %>
   </div>
 <% end %>
