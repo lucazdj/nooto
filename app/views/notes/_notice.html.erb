@@ -1,0 +1,7 @@
+<% if notice.present? %>
+  <%= tag.div class: "notice", data: { controller: "notice", notice_target: "notice", action: "click->notice#close" } do %>
+    <p>
+      <%= notice %>
+    </p>
+  <% end %>
+<% end %>

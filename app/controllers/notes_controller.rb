@@ -26,9 +26,14 @@ class NotesController < ApplicationController
 
     respond_to do |format|
       if @note.save
-        format.turbo_stream { render turbo_stream: turbo_stream.append('notes', partial: 'notes/note', locals: { note: @note }) }
-        format.html { redirect_to note_url(@note), notice: "Note was successfully created." }
+        format.html { redirect_to note_url(@note) }
         format.json { render :show, status: :created, location: @note }
+        format.turbo_stream {
+          render turbo_stream: [
+              turbo_stream.replace(@note),
+              turbo_stream.update("notice", partial: "notes/notice", locals: { notice: I18n.t(:note_created) })
+          ]
+        }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @note.errors, status: :unprocessable_entity }
@@ -40,9 +45,14 @@ class NotesController < ApplicationController
   def update
     respond_to do |format|
       if @note.update(note_params)
-        format.turbo_stream { render turbo_stream: turbo_stream.replace(@note) }
-        format.html { redirect_to note_url(@note), notice: I18n.t(:note_updated) }
+        format.html { redirect_to note_url(@note) }
         format.json { render :show, status: :ok, location: @note }
+        format.turbo_stream {
+          render turbo_stream: [
+              turbo_stream.replace(@note),
+              turbo_stream.update("notice", partial: "notes/notice", locals: { notice: I18n.t(:note_updated) })
+          ]
+        }
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @note.errors, status: :unprocessable_entity }
@@ -55,9 +65,14 @@ class NotesController < ApplicationController
     @note.destroy
 
     respond_to do |format|
-      format.turbo_stream { render turbo_stream: turbo_stream.remove(@note) }
-      format.html { redirect_to notes_url, notice: I18n.t(:note_deleted) }
+      format.html { redirect_to notes_url }
       format.json { head :no_content }
+      format.turbo_stream {
+        render turbo_stream: [
+            turbo_stream.remove(@note),
+            turbo_stream.update("notice", partial: "notes/notice", locals: { notice: I18n.t(:note_deleted) })
+        ]
+      }
     end
   end
 
