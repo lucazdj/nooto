@@ -11,7 +11,7 @@ class NotesController < ApplicationController
   def show
     respond_to do |format|
       format.turbo_stream {
-        render turbo_stream: turbo_stream.update("modal", partial: "notes/note", locals: { note: @note })
+        render turbo_stream: turbo_stream.update("modal", template: "notes/show", locals: { note: @note })
       }
     end
   end

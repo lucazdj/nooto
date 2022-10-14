@@ -39,6 +39,10 @@
     @apply bg-slate-900/50 p-32 fixed w-screen h-screen;
   }
 
+  .dialog > * {
+    @apply max-w-md mx-auto;
+  }
+
   .card {
     @apply shadow rounded bg-emerald-200 p-5;
   }

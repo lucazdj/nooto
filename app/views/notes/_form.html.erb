@@ -1,35 +1,33 @@
-<%= tag.div id: dom_id(note), data: { modal_target: "content" } do %>
-  <%= form_with(model: note, data: { action: "turbo:submit-end->modal#close" }, class: "contents") do |form| %>
-    <% if note.errors.any? %>
-      <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-        <h2><%= pluralize(note.errors.count, "error") %> prohibited this note from being saved:</h2>
+<%= form_with(model: note, data: { action: "turbo:submit-end->modal#close" }, class: "contents") do |form| %>
+  <% if note.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%= pluralize(note.errors.count, "error") %> prohibited this note from being saved:</h2>
 
-        <ul>
-          <% note.errors.each do |error| %>
-            <li><%= error.full_message %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-
-    <div class="form-row">
-      <%= form.label :title %>
-      <%= form.text_field :title, class: "form-text-field" %>
-    </div>
-
-    <div class="form-row">
-      <%= form.label :content %>
-      <%= form.text_field :content, class: "form-text-field" %>
-    </div>
-
-    <div class="form-row">
-      <%= form.label :author %>
-      <%= form.text_field :author, class: "form-text-field" %>
-    </div>
-
-    <div class="form-row">
-      <%= form.submit type == :new ? t(:create) : t(:save), class: "button-primary" %>
-      <%= button_tag t(:close), data: { action: "click->modal#close" }, type: "button", class: "button-outline-primary" %>
+      <ul>
+        <% note.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
     </div>
   <% end %>
+
+  <div class="form-row">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-text-field" %>
+  </div>
+
+  <div class="form-row">
+    <%= form.label :content %>
+    <%= form.text_field :content, class: "form-text-field" %>
+  </div>
+
+  <div class="form-row">
+    <%= form.label :author %>
+    <%= form.text_field :author, class: "form-text-field" %>
+  </div>
+
+  <div class="form-row">
+    <%= form.submit type == :new ? t(:create) : t(:save), class: "button-primary" %>
+    <%= button_tag t(:close), data: { action: "click->modal#close" }, type: "button", class: "button-outline-primary" %>
+  </div>
 <% end %>
