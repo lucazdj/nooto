@@ -1,6 +1,6 @@
 class NotesController < ApplicationController
   before_action :set_note, only: %i[ show edit update destroy ]
-  before_action :ensure_frame_response, only: [:new, :edit]
+  before_action :ensure_frame_response, only: []
 
   # GET /notes or /notes.json
   def index
@@ -9,20 +9,36 @@ class NotesController < ApplicationController
 
   # GET /notes/1 or /notes/1.json
   def show
+    respond_to do |format|
+      format.turbo_stream {
+        render turbo_stream: turbo_stream.update("modal", partial: "notes/note", locals: { note: @note })
+      }
+    end
   end
 
   # GET /notes/new
   def new
     @note = Note.new
+    respond_to do |format|
+      format.html
+      format.turbo_stream {
+        render turbo_stream: turbo_stream.update("modal", template: "notes/new", locals: { note: @note, type: :new })
+      }
+    end
   end
 
   # GET /notes/1/edit
   def edit
+    respond_to do |format|
+      format.turbo_stream {
+        render turbo_stream: turbo_stream.update("modal", template: "notes/edit", locals: { note: @note, type: :edit })
+      }
+    end
   end
 
   # POST /notes or /notes.json
   def create
-    @note = Note.new(note_params)
+    @note = Note.new note_params
 
     respond_to do |format|
       if @note.save
@@ -30,7 +46,7 @@ class NotesController < ApplicationController
         format.json { render :show, status: :created, location: @note }
         format.turbo_stream {
           render turbo_stream: [
-              turbo_stream.replace(@note),
+              turbo_stream.append("notes", partial: "notes/note", locals: { note: @note }),
               turbo_stream.update("notice", partial: "notes/notice", locals: { notice: I18n.t(:note_created) })
           ]
         }
@@ -89,7 +105,7 @@ class NotesController < ApplicationController
   end
 
   def ensure_frame_response
-    return unless Rails.env.development?
-    redirect_to root_path unless turbo_frame_request?
+    # return unless Rails.env.development?
+    # redirect_to root_path unless turbo_frame_request?
   end
 end

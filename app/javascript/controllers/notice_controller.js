@@ -5,8 +5,7 @@ export default class extends Controller {
 
   connect() {
     setTimeout(() => {
-      this['noticeTarget'].removeAttribute("src");
       this['noticeTarget'].remove();
-    }, 3000);
+    }, 2000);
   }
 }

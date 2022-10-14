@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root 'notes#index'
 
-  get 'home', to: 'pages#home'
+  get 'home', 'index', to: 'notes#index'
 
   resources :notes
 end

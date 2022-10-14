@@ -12,7 +12,9 @@
 
 <body class="flex flex-col h-screen bg-emerald-50">
 
-<%= turbo_frame_tag "modal", class: "contents", data: { controller: "modal" } %>
+<%= tag.dialog id: "modal",
+               data: { controller: "modal", action: "click->modal#close keyup@window->modal#close", modal_target: "dialog" },
+               role: "dialog", class: "dialog", open: false %>
 
 <header class="h-16 shrink-0 bg-green-300">
   <div class="h-full container flex justify-center items-center">
@@ -24,7 +26,7 @@
   <%= yield %>
 </main>
 
-<%= turbo_frame_tag "notice", class: "contents" %>
+<%= tag.div id: "notice", class: "contents" %>
 
 <footer class="h-16 shrink-0 bg-green-300">
   <div class="h-full container flex justify-center items-center">

@@ -36,7 +36,11 @@
   }
 
   .dialog {
-    @apply bg-slate-900/50 fixed w-screen h-screen;
+    @apply bg-slate-900/50 p-32 fixed w-screen h-screen;
+  }
+
+  .card {
+    @apply shadow rounded bg-emerald-200 p-5;
   }
 }
 
