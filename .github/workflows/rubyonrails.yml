@@ -31,11 +31,11 @@ jobs:
       - name: Set up Ruby
         uses: actions/setup-ruby@v1
         with:
-          ruby-version: 2.6.x
+          ruby-version: 3.1.2
       - name: Set up Node
         uses: actions/setup-node@v1
         with:
-          node-version: 10.13.0
+          node-version: 18.x.x
       - name: Install dependencies
         run: |
           sudo apt-get -yqq install libpq-dev build-essential libcurl4-openssl-dev
