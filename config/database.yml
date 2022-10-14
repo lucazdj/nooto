@@ -22,4 +22,6 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: rails_github_actions_production
+  username: rails_github_actions
+  password: <%= ENV['RAILS_GITHUB_ACTIONS_DATABASE_PASSWORD'] %>
