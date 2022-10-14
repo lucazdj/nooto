@@ -1,7 +1,7 @@
 # Put this in the file: .github/workflows/verify.yml
 
 name: Verify
-on: [push]
+on: [ push ]
 
 jobs:
   linters:
@@ -48,7 +48,7 @@ jobs:
           POSTGRES_USER: myapp
           POSTGRES_DB: myapp_test
           POSTGRES_PASSWORD: ""
-        ports: ["5432:5432"]
+        ports: [ "5432:5432" ]
 
     steps:
       - name: Checkout code
@@ -78,4 +78,4 @@ jobs:
           bin/rails db:setup
 
       - name: Run tests
-        run: bin/rspec
+        run: bundle exec rake
