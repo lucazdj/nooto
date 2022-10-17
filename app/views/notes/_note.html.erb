@@ -1,7 +1,7 @@
 <%= tag.div id: dom_id(note), class: "flex flex-col gap-4 card" do %>
   <strong><%= note.title %></strong>
   <%= note.content %>
-  <div class="flex flex-wrap gap-4">
+  <div class="flex flex-wrap gap-3">
     <% if action_name != "show" %>
       <%= link_to t(:show), note, data: { turbo_stream: "true" }, class: "button-outline-primary" %>
     <% end %>
