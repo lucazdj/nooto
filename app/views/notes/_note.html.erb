@@ -1,4 +1,4 @@
-<%= tag.div id: dom_id(note), class: "flex flex-col gap-4 card" do %>
+<%= tag.div id: dom_id(note), class: "flex flex-col gap-4 card bg-#{ note.color.blank? ? 'green' : note.color }-400" do %>
   <strong><%= note.title %></strong>
   <%= note.content %>
   <div class="flex flex-wrap gap-3">

@@ -32,7 +32,8 @@
   }
 
   .form-text-field {
-    @apply block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full;
+    @apply block bg-transparent border-0 outline-0 px-3 py-2 mt-2 w-full;
+    @apply focus:border-0 focus:outline-0 focus:outline-none focus:ring-0;
   }
 
   .dialog {

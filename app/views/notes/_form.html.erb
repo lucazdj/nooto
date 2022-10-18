@@ -12,21 +12,22 @@
   <% end %>
 
   <div class="form-row">
-    <%= form.label :title %>
-    <%= form.text_field :title, class: "form-text-field" %>
+    <%= form.label :title unless type == :edit %>
+    <%= form.text_field :title, placeholder: :title, class: "form-text-field" %>
   </div>
 
   <div class="form-row">
-    <%= form.label :content %>
-    <%= form.text_field :content, class: "form-text-field" %>
+    <%= form.label :content unless type == :edit %>
+    <%= form.text_area :content, size: "5x5", class: "form-text-field overflow-none" %>
   </div>
 
   <div class="form-row">
-    <%= form.label :author %>
-    <%= form.text_field :author, class: "form-text-field" %>
+    <%= form.label :color %>
+    <%= form.radio_button :color, class: "form-text-field" %>
+
   </div>
 
-  <div class="form-row">
+  <div class="flex flex-row gap-3">
     <%= form.submit type == :new ? t(:create) : t(:save), class: "button-primary" %>
     <%= button_tag t(:close), data: { action: "click->modal#close" }, type: "button", class: "button-outline-primary" %>
   </div>

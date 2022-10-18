@@ -23,8 +23,13 @@ class NotesController < ApplicationController
   end
 
   # GET /notes/new
+  def colors
+    @colors = %w[blue green indigo slate]
+  end
+
   def new
     @note = Note.new
+    @colors = colors
     respond_to do |format|
       format.html
       format.turbo_stream do
@@ -35,6 +40,7 @@ class NotesController < ApplicationController
 
   # GET /notes/1/edit
   def edit
+    @colors = colors
     respond_to do |format|
       format.html
       format.turbo_stream do
@@ -109,7 +115,7 @@ class NotesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def note_params
-    params.require(:note).permit(:title, :content, :author)
+    params.require(:note).permit(:title, :content, :author, :color)
   end
 
   def ensure_frame_response
