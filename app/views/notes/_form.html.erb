@@ -29,6 +29,6 @@
 
   <div class="flex flex-row gap-3">
     <%= form.submit type == :new ? t(:create) : t(:save), class: "button-primary" %>
-    <%= button_tag t(:close), data: { action: "click->modal#close" }, type: "button", class: "button-outline-primary" %>
+    <%= button_tag t(:close), data: { action: "click->modal#close" }, type: "button", class: "button-primary #{bg? note.color, 700}" %>
   </div>
 <% end %>

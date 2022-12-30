@@ -1,11 +1,14 @@
-<%= tag.div id: dom_id(note), class: "flex flex-col gap-4 card bg-#{ note.color.blank? ? 'green' : note.color }-400" do %>
+<%= tag.div id: dom_id(note),
+            class: "flex flex-col gap-4 card #{bg? note.color} shadow" do %>
+
   <strong><%= note.title %></strong>
+
   <%= note.content %>
+
   <div class="flex flex-wrap gap-3">
-    <% if action_name != "show" %>
-      <%= link_to t(:show), note, data: { turbo_stream: "true" }, class: "button-outline-primary" %>
-    <% end %>
-    <%= link_to t(:edit), edit_note_path(note), data: { turbo_stream: "true" }, class: "button-outline-primary" %>
-    <%= button_to t(:delete), note_path(note), method: :delete, class: "button-outline-primary" %>
+    <%= link_to t(:show), note, data: { turbo_stream: 'true' }, class: "button-primary #{bg? note.color, 700}" unless action_name === 'show' %>
+    <%= link_to t(:edit), edit_note_path(note), data: { turbo_stream: 'true' }, class: "button-primary #{bg? note.color, 700}" %>
+    <%= button_to t(:delete), note_path(note), method: :delete, class: "button-primary #{bg? note.color, 700}" %>
   </div>
+
 <% end %>

@@ -10,13 +10,13 @@
   <%= javascript_importmap_tags %>
 </head>
 
-<body class="flex flex-col h-screen bg-emerald-50">
+<body class="flex flex-col h-screen bg-cyan-50">
 
 <%= tag.dialog id: "modal",
                data: { controller: "modal", action: "click->modal#close keyup@window->modal#close", modal_target: "dialog" },
                role: "dialog", class: "dialog", open: false %>
 
-<header class="h-16 shrink-0 bg-green-300">
+<header class="h-16 shrink-0 bg-indigo-500 shadow">
   <div class="h-full container flex justify-center items-center">
     <span class="header-logo"><%= link_to t(:app_name), root_path %></span>
   </div>

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Controller for notes
 class NotesController < ApplicationController
   before_action :set_note, only: %i[show edit update destroy]
@@ -22,14 +20,9 @@ class NotesController < ApplicationController
     end
   end
 
-  # GET /notes/new
-  def colors
-    @colors = %w[blue green indigo slate]
-  end
-
   def new
     @note = Note.new
-    @colors = colors
+    @colors = NotesHelper::COLORS
     respond_to do |format|
       format.html
       format.turbo_stream do
@@ -40,7 +33,7 @@ class NotesController < ApplicationController
 
   # GET /notes/1/edit
   def edit
-    @colors = colors
+    @colors = NotesHelper::COLORS
     respond_to do |format|
       format.html
       format.turbo_stream do
@@ -50,6 +43,7 @@ class NotesController < ApplicationController
   end
 
   # POST /notes or /notes.json
+  # @return [Object]
   def create
     @note = Note.new note_params
 
