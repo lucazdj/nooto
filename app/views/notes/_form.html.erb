@@ -21,14 +21,15 @@
     <%= form.text_area :content, size: "5x5", class: "form-text-field overflow-none" %>
   </div>
 
-  <div class="form-row">
-    <%= form.label :color %>
-    <%= form.radio_button :color, class: "form-text-field" %>
+  <div class="flex flex-wrap gap-3 form-row">
+    <% NotesHelper::COLORS.each do |color| %>
+      <%= form.radio_button :color, color, class: "h-8 w-8 form-radio appearance-none checked:#{bg? color, 900} #{bg? color, 700}" %>
+    <% end %>
 
   </div>
 
-  <div class="flex flex-row gap-3">
+  <div class="flexflex-row gap-3">
     <%= form.submit type == :new ? t(:create) : t(:save), class: "button-primary" %>
-    <%= button_tag t(:close), data: { action: "click->modal#close" }, type: "button", class: "button-primary #{bg? note.color, 700}" %>
+    <%= button_tag t(:close), data: { action: "click->modal#close" }, type: "button", class: "button-primary #{bg? note.color, 800}" %>
   </div>
 <% end %>

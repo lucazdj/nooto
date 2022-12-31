@@ -1,7 +1,7 @@
 # Controller for notes
 class NotesController < ApplicationController
   before_action :set_note, only: %i[show edit update destroy]
-  before_action :ensure_frame_response, only: []
+  before_action :ensure_frame_response, only: %i[show]
 
   # GET /notes or /notes.json
   def index
@@ -35,7 +35,9 @@ class NotesController < ApplicationController
   def edit
     @colors = NotesHelper::COLORS
     respond_to do |format|
-      format.html
+      format.html do
+        redirect_to root_path
+      end
       format.turbo_stream do
         render turbo_stream: turbo_stream.update('modal', template: 'notes/edit', locals: { note: @note, type: :edit })
       end
