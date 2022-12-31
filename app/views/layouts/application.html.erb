@@ -10,7 +10,7 @@
   <%= javascript_importmap_tags %>
 </head>
 
-<body class="flex flex-col h-screen bg-cyan-50">
+<body class="flex flex-col h-screen bg-indigo-50">
 
 <%= tag.dialog id: "modal",
                data: { controller: "modal", action: "click->modal#close keyup@window->modal#close", modal_target: "dialog" },
@@ -28,7 +28,7 @@
 
 <%= tag.div id: "notice", class: "contents" %>
 
-<footer class="h-16 shrink-0 bg-green-300">
+<footer class="h-16 shrink-0 bg-indigo-500">
   <div class="h-full container flex justify-center items-center">
     <span class="header-logo"><%= t(:app_name) %></span>
   </div>

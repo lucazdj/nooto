@@ -1,5 +1,5 @@
 <%= tag.div id: dom_id(@note, :new), data: { modal_target: "content" } do %>
-  <%= tag.div class: "card bg-#{ @note.color.blank? ? 'green' : @note.color }-400" do %>
-    <%= render "form", note: @note, colors: @colors, type: :new %>
+  <%= tag.div class: "card #{bg_color note.color, 400}" do %>
+    <%= render "form", note: @note, type: :new %>
   <% end %>
 <% end %>

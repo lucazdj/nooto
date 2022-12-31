@@ -1,9 +1,15 @@
-# Module for helpers
 module NotesHelper
-  COLORS = %w[slate gray zinc neutral stone red orange amber yellow lime green emerald teal cyan sky blue indigo violet
+  # slate gray zinc neutral stone
+  COLORS = %w[red orange amber yellow lime green emerald teal cyan sky blue indigo violet
               purple fuchsia pink rose].freeze
 
-  def bg?(color, tone = 500)
-    COLORS.include?(color) ? "bg-#{color}-#{tone}" : "bg-indigo-#{tone}"
+  def bg_color(color = nil, tone = 400)
+    color = 'indigo' unless COLORS.include?(color)
+    "bg-#{color}-#{tone}"
+  end
+
+  def text_color(color = nil, tone = 400)
+    color = 'indigo' unless COLORS.include?(color)
+    "text-#{color}-#{tone}"
   end
 end

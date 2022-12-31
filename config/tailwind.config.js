@@ -8,8 +8,7 @@ module.exports = {
     './app/views/**/*.{erb,haml,html,slim}'
   ],
   safelist: [
-    {pattern: /bg-(.+)-(100|200|300|400|500|600|700|800|900)/,},
-      'appearance-none',
+    { pattern: /bg-(.+)/, variants: ['checked'], },
   ],
   theme: {
     extend: {
@@ -23,7 +22,7 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/forms'),
+    //require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
   ]

@@ -1,6 +1,6 @@
-require_relative "boot"
+require_relative 'boot'
 
-require "rails/all"
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -16,7 +16,7 @@ module Nooto
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
-    config.time_zone = "America/Manaus"
+    config.time_zone = 'America/Manaus'
     config.i18n.available_locales = [:"pt-BR"]
     config.i18n.default_locale = :"pt-BR"
 

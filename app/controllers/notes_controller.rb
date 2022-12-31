@@ -35,9 +35,7 @@ class NotesController < ApplicationController
   def edit
     @colors = NotesHelper::COLORS
     respond_to do |format|
-      format.html do
-        redirect_to root_path
-      end
+      format.html { redirect_to root_path }
       format.turbo_stream do
         render turbo_stream: turbo_stream.update('modal', template: 'notes/edit', locals: { note: @note, type: :edit })
       end
@@ -45,7 +43,6 @@ class NotesController < ApplicationController
   end
 
   # POST /notes or /notes.json
-  # @return [Object]
   def create
     @note = Note.new note_params
 

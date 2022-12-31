@@ -18,18 +18,20 @@
 
   <div class="form-row">
     <%= form.label :content unless type == :edit %>
-    <%= form.text_area :content, size: "5x5", class: "form-text-field overflow-none" %>
+    <%= form.text_area :content, size: "5x5", class: "appearance-none form-text-field overflow-none" %>
   </div>
 
-  <div class="flex flex-wrap gap-3 form-row">
+  <%= tag.div class: "flex flex-wrap p-2 gap-3 form-row rounded shadow #{bg_color note.color, 200}" do %>
     <% NotesHelper::COLORS.each do |color| %>
-      <%= form.radio_button :color, color, class: "h-8 w-8 form-radio appearance-none checked:#{bg? color, 900} #{bg? color, 700}" %>
+      <%= form.radio_button :color, color,
+                            class: "h-6 w-6 appearance-none rounded-full shadow
+                            checked:#{bg_color color, 900} #{bg_color color, 500}" %>
     <% end %>
+  <% end %>
 
-  </div>
-
-  <div class="flexflex-row gap-3">
-    <%= form.submit type == :new ? t(:create) : t(:save), class: "button-primary" %>
-    <%= button_tag t(:close), data: { action: "click->modal#close" }, type: "button", class: "button-primary #{bg? note.color, 800}" %>
+  <div class="flex flex-row gap-3">
+    <%= form.submit type == :new ? t(:create) : t(:save), class: "button-primary #{bg_color note.color, 800}" %>
+    <%= button_tag t(:close), data: { action: "click->modal#close" }, type: "button",
+                   class: "button-primary #{bg_color note.color, 800}" %>
   </div>
 <% end %>
