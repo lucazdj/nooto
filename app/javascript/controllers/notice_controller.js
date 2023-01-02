@@ -1,11 +1,11 @@
-import { Controller } from "@hotwired/stimulus";
+import { Controller } from '@hotwired/stimulus'
 
 export default class extends Controller {
-  static targets = ['notice'];
+  static targets = ['notice']
 
   connect() {
     setTimeout(() => {
-      this['noticeTarget'].remove();
-    }, 2000);
+      this['noticeTarget'].remove()
+    }, 2000)
   }
 }

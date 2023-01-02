@@ -8,16 +8,20 @@ class NotesController < ApplicationController
     @notes = Note.all
   end
 
+  def stream_show
+    [turbo_stream.update('modal', template: 'notes/show', locals: { note: @note })]
+  end
+
   # GET /notes/1 or /notes/1.json
   def show
     respond_to do |format|
       format.html
-      format.turbo_stream do
-        render turbo_stream: [
-          turbo_stream.update('modal', template: 'notes/show', locals: { note: @note })
-        ]
-      end
+      format.turbo_stream { render turbo_stream: stream_show }
     end
+  end
+
+  def stream_new 
+    [turbo_stream.update('modal', template: 'notes/new', locals: { note: @note, type: :new })]
   end
 
   def new
@@ -25,10 +29,12 @@ class NotesController < ApplicationController
     @colors = NotesHelper::COLORS
     respond_to do |format|
       format.html
-      format.turbo_stream do
-        render turbo_stream: turbo_stream.update('modal', template: 'notes/new', locals: { note: @note, type: :new })
-      end
+      format.turbo_stream { render turbo_stream: stream_new }
     end
+  end
+
+  def stream_edit
+    [turbo_stream.update('modal', template: 'notes/edit', locals: { note: @note, type: :edit })]
   end
 
   # GET /notes/1/edit
@@ -36,10 +42,14 @@ class NotesController < ApplicationController
     @colors = NotesHelper::COLORS
     respond_to do |format|
       format.html { redirect_to root_path }
-      format.turbo_stream do
-        render turbo_stream: turbo_stream.update('modal', template: 'notes/edit', locals: { note: @note, type: :edit })
-      end
+      format.turbo_stream { render turbo_stream: stream_edit }
     end
+  end
+
+  def stream_create
+    [turbo_stream.append('notes', partial: 'notes/note', locals: { note: @note }),
+     turbo_stream.replace('new_note', partial: 'notes/note', locals: { note: @note }),
+     turbo_stream.update('notice', partial: 'notes/notice', locals: { notice: I18n.t(:note_created) })]
   end
 
   # POST /notes or /notes.json
@@ -50,18 +60,18 @@ class NotesController < ApplicationController
       if @note.save
         format.html { redirect_to note_url(@note) }
         format.json { render :show, status: :created, location: @note }
-        format.turbo_stream do
-          render turbo_stream: [
-            turbo_stream.append('notes', partial: 'notes/note', locals: { note: @note }),
-            turbo_stream.replace('new_note', partial: 'notes/note', locals: { note: @note }),
-            turbo_stream.update('notice', partial: 'notes/notice', locals: { notice: I18n.t(:note_created) })
-          ]
-        end
+        format.turbo_stream { render turbo_stream: stream_create }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @note.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def stream_update
+    [turbo_stream.replace(@note, partial: 'notes/note', locals: { note: @note }),
+     turbo_stream.replace("edit_note_#{@note.id}", partial: 'notes/note', locals: { note: @note }),
+     turbo_stream.update('notice', partial: 'notes/notice', locals: { notice: I18n.t(:note_updated) })]
   end
 
   # PATCH/PUT /notes/1 or /notes/1.json
@@ -70,18 +80,17 @@ class NotesController < ApplicationController
       if @note.update(note_params)
         format.html { redirect_to note_url(@note) }
         format.json { render :show, status: :ok, location: @note }
-        format.turbo_stream do
-          render turbo_stream: [
-            turbo_stream.replace(@note, partial: 'notes/note', locals: { note: @note }),
-            turbo_stream.replace("edit_note_#{@note.id}", partial: 'notes/note', locals: { note: @note }),
-            turbo_stream.update('notice', partial: 'notes/notice', locals: { notice: I18n.t(:note_updated) })
-          ]
-        end
+        format.turbo_stream { render turbo_stream: stream_update }
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @note.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def stream_destroy
+    [turbo_stream.remove(@note),
+     turbo_stream.update('notice', partial: 'notes/notice', locals: { notice: I18n.t(:note_deleted) })]
   end
 
   # DELETE /notes/1 or /notes/1.json
@@ -90,12 +99,7 @@ class NotesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to notes_url }
       format.json { head :no_content }
-      format.turbo_stream do
-        render turbo_stream: [
-          turbo_stream.remove(@note),
-          turbo_stream.update('notice', partial: 'notes/notice', locals: { notice: I18n.t(:note_deleted) })
-        ]
-      end
+      format.turbo_stream { render turbo_stream: stream_destroy }
     end
   end
 
