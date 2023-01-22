@@ -4,55 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b26ed0c-24db-4552-8e01-34e29df83ab9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/nooto.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.rubocop.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Procfile.dev" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/builds/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.tailwind.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/notes_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers/notes_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/application.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/controllers/application.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/controllers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/controllers/modal_controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/controllers/notice_controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/author.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/note.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/notes/_form.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/notes/_note.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/notes/_note.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/notes/_notice.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/notes/edit.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/notes/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/notes/index.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/notes/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/notes/show.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/notes/show.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/bundle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/bundle.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/dev" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/importmap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/importmap.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/locales/pt-BR.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/tailwind.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20230122010641_create_notes.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20230122010924_create_authors.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controllers/notes_controller_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/fixtures/authors.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/fixtures/notes.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/models/author_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/models/note_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/system/notes_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/javascript/.keep" afterDir="false" />
+    <list default="true" id="1b26ed0c-24db-4552-8e01-34e29df83ab9" name="Changes" comment="att">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +19,9 @@
         <option value="ERB File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -206,15 +162,36 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674348570894</updated>
-      <workItem from="1674348571930" duration="5602000" />
+      <workItem from="1674348571930" duration="6428000" />
     </task>
+    <task id="LOCAL-00001" summary="att">
+      <created>1674356524518</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674356524518</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="att" />
+    <option name="LAST_COMMIT_MESSAGE" value="att" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/nooto@nooto.rcov" NAME="nooto Coverage Results" MODIFIED="1674355358874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="nooto" />

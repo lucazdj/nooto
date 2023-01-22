@@ -32,7 +32,7 @@
   }
 
   .dialog {
-    @apply bg-slate-900/50 p-32 fixed w-screen h-screen;
+    @apply bg-slate-900/50 p-8 md:p-12 lg:p-32 fixed w-full h-full;
   }
 
   .dialog > * {

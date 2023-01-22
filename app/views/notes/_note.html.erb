@@ -4,6 +4,8 @@
 
   <%= note.content %>
 
+  <p><%= note.author.name %></p>
+
   <div class="flex flex-wrap gap-3">
     <%= link_to t(:show), note, data: { turbo_stream: 'true' }, class: "button-primary #{bg_color note.color, 700}" unless action_name == "show" %>
     <%= link_to t(:edit), edit_note_path(note), data: { turbo_stream: 'true' }, class: "button-primary #{bg_color note.color, 700}" %>
