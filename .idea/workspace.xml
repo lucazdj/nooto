@@ -4,15 +4,55 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d23b698-89a8-4af4-ada2-dc2415308f8e" name="Changes" comment="fixes">
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/notes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/notes_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/controllers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/controllers/modal_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/controllers/modal_controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/controllers/notice_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/controllers/notice_controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/notes/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/notes/new.html.erb" afterDir="false" />
+    <list default="true" id="1b26ed0c-24db-4552-8e01-34e29df83ab9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/nooto.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.rubocop.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Procfile.dev" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/builds/.keep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.tailwind.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/notes_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/notes_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/javascript/application.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/javascript/controllers/application.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/javascript/controllers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/javascript/controllers/modal_controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/javascript/controllers/notice_controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/author.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/note.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/notes/_form.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/notes/_note.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/notes/_note.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/notes/_notice.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/notes/edit.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/notes/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/notes/index.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/notes/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/notes/show.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/notes/show.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/bundle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/bundle.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/dev" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/importmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/importmap.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/locales/pt-BR.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/tailwind.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20230122010641_create_notes.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20230122010924_create_authors.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/notes_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/authors.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/notes.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/author_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/note_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/system/notes_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/javascript/.keep" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,12 +62,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="package.json" />
+        <option value="JavaScript File" />
+        <option value="ERB File" />
       </list>
     </option>
-  </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="7a045e80-fbfa-45a7-9eae-0543264d155a" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -39,7 +77,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2JereokPrwKKFtO8xwb5vs1vkFA" />
+  <component name="ProjectId" id="2KewtW0GpuTOUseFdusVn7rICWJ" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -47,29 +85,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;19.0.1&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.11.18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Ruby/Ruby31-x64/bin/ruby.exe&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
-    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Lucas\\AppData\\Local\\JetBrains\\Toolbox\\apps\\RubyMine\\ch-0\\223.8214.60\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Notification.DisplayName-DoNotAsk-Gem Manager: Missing Gems": "Missing gem dependencies",
+    "Notification.DoNotAsk-Gem Manager: Missing Gems": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "javascript.nodejs.core.library.configured.version": "19.0.1",
+    "javascript.nodejs.core.library.typings.version": "18.11.18",
+    "last_opened_file_path": "C:/Users/Lucas/Documents/Projetos/Local/nooto/config/locales",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ruby.rails.projectView.checked": "true",
+    "ruby.structure.view.model.defaults.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Rails.dev">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lucas\Documents\Projetos\Local\nooto\config\locales" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gem Command.css">
     <configuration name="css" type="CommandRunConfigurationType" factoryName="Gem Command">
       <module name="nooto" />
       <COMMAND_RUN_CONFIGURATION NAME="RUBY_ARGS" VALUE="" />
@@ -86,7 +129,7 @@
       <COMMAND_CONFIG_SETTINGS_ID NAME="WORKING_DIR" VALUE="$MODULE_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="dev" type="RailsRunConfigurationType" factoryName="Rails">
+    <configuration name="nooto" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="nooto" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
@@ -149,7 +192,7 @@
     </configuration>
     <list>
       <item itemvalue="Gem Command.css" />
-      <item itemvalue="Rails.dev" />
+      <item itemvalue="Rails.nooto" />
       <item itemvalue="Rake.spec: nooto" />
       <item itemvalue="Rake.test: nooto" />
     </list>
@@ -158,55 +201,23 @@
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2d23b698-89a8-4af4-ada2-dc2415308f8e" name="Changes" comment="" />
-      <created>1672449487829</created>
+      <changelist id="1b26ed0c-24db-4552-8e01-34e29df83ab9" name="Changes" comment="" />
+      <created>1674348570894</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1672449487829</updated>
-      <workItem from="1672449489010" duration="2658000" />
-      <workItem from="1672453174962" duration="8651000" />
-      <workItem from="1672499823772" duration="7653000" />
-      <workItem from="1672630404438" duration="2653000" />
+      <updated>1674348570894</updated>
+      <workItem from="1674348571930" duration="5602000" />
     </task>
-    <task id="LOCAL-00001" summary="att">
-      <created>1672459310199</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1672459310199</updated>
-    </task>
-    <task id="LOCAL-00002" summary="fixes">
-      <created>1672505825948</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1672505825948</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="att" />
-    <MESSAGE value="fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/nooto@dev.rcov" NAME="dev Coverage Results" MODIFIED="1672632813723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="nooto" />
-    <SUITE FILE_PATH="coverage/nooto@css.rcov" NAME="css Coverage Results" MODIFIED="1672501262332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="nooto" />
+    <SUITE FILE_PATH="coverage/nooto@nooto.rcov" NAME="nooto Coverage Results" MODIFIED="1674355358874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="nooto" />
+    <SUITE FILE_PATH="coverage/nooto@css.rcov" NAME="css Coverage Results" MODIFIED="1674351832366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="nooto" />
   </component>
 </project>

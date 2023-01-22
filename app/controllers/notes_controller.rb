@@ -9,7 +9,9 @@ class NotesController < ApplicationController
   end
 
   def stream_show
-    [turbo_stream.update('modal', template: 'notes/show', locals: { note: @note })]
+    [
+      turbo_stream.update('modal', template: 'notes/show', locals: { note: @note })
+    ]
   end
 
   # GET /notes/1 or /notes/1.json
@@ -20,8 +22,10 @@ class NotesController < ApplicationController
     end
   end
 
-  def stream_new 
-    [turbo_stream.update('modal', template: 'notes/new', locals: { note: @note, type: :new })]
+  def stream_new
+    [
+      turbo_stream.update('modal', template: 'notes/new', locals: { note: @note, type: :new })
+    ]
   end
 
   def new
@@ -34,7 +38,9 @@ class NotesController < ApplicationController
   end
 
   def stream_edit
-    [turbo_stream.update('modal', template: 'notes/edit', locals: { note: @note, type: :edit })]
+    [
+      turbo_stream.update('modal', template: 'notes/edit', locals: { note: @note, type: :edit })
+    ]
   end
 
   # GET /notes/1/edit
@@ -47,9 +53,11 @@ class NotesController < ApplicationController
   end
 
   def stream_create
-    [turbo_stream.append('notes', partial: 'notes/note', locals: { note: @note }),
-     turbo_stream.replace('new_note', partial: 'notes/note', locals: { note: @note }),
-     turbo_stream.update('notice', partial: 'notes/notice', locals: { notice: I18n.t(:note_created) })]
+    [
+      turbo_stream.append('notes', partial: 'notes/note', locals: { note: @note }),
+      turbo_stream.replace('new_note', partial: 'notes/note', locals: { note: @note }),
+      turbo_stream.update('notice', partial: 'notes/notice', locals: { notice: I18n.t(:note_created) })
+    ]
   end
 
   # POST /notes or /notes.json
@@ -69,9 +77,11 @@ class NotesController < ApplicationController
   end
 
   def stream_update
-    [turbo_stream.replace(@note, partial: 'notes/note', locals: { note: @note }),
-     turbo_stream.replace("edit_note_#{@note.id}", partial: 'notes/note', locals: { note: @note }),
-     turbo_stream.update('notice', partial: 'notes/notice', locals: { notice: I18n.t(:note_updated) })]
+    [
+      turbo_stream.replace(@note, partial: 'notes/note', locals: { note: @note }),
+      turbo_stream.replace("edit_note_#{@note.id}", partial: 'notes/note', locals: { note: @note }),
+      turbo_stream.update('notice', partial: 'notes/notice', locals: { notice: I18n.t(:note_updated) })
+    ]
   end
 
   # PATCH/PUT /notes/1 or /notes/1.json
@@ -89,8 +99,10 @@ class NotesController < ApplicationController
   end
 
   def stream_destroy
-    [turbo_stream.remove(@note),
-     turbo_stream.update('notice', partial: 'notes/notice', locals: { notice: I18n.t(:note_deleted) })]
+    [
+      turbo_stream.remove(@note),
+      turbo_stream.update('notice', partial: 'notes/notice', locals: { notice: I18n.t(:note_deleted) })
+    ]
   end
 
   # DELETE /notes/1 or /notes/1.json

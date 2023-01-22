@@ -30,21 +30,21 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 pt-BR:
-  lorem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Montes nascetur ridiculus mus mauris vitae. Pretium fusce id velit ut tortor pretium viverra suspendisse. Habitasse platea dictumst vestibulum rhoncus."
-  app_name: "Notas"
-  hello: "Olá"
-  create: "Criar"
-  read: "Ver"
-  update: "Editar"
-  delete: "Apagar"
-  return: "Voltar"
-  new: "Novo"
-  new_: "Nova"
-  edit: "Editar"
-  show: "Ver"
-  notes: "Notas"
-  close: "Fechar"
-  note_deleted: "Nota foi apagada."
-  note_updated: "Nota foi atualizada."
-  note_created: "Nota foi criada."
-  save: "Salvar"
+  lorem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Montes nascetur ridiculus mus mauris vitae. Pretium fusce id velit ut tortor pretium viverra suspendisse. Habitasse platea dictumst vestibulum rhoncus.'
+  app_name: 'Notas'
+  hello: 'Olá'
+  create: 'Criar'
+  read: 'Ver'
+  update: 'Editar'
+  delete: 'Apagar'
+  return: 'Voltar'
+  new: 'Novo'
+  new_: 'Nova'
+  edit: 'Editar'
+  show: 'Ver'
+  notes: 'Notas'
+  close: 'Fechar'
+  note_deleted: 'Nota foi apagada.'
+  note_updated: 'Nota foi atualizada.'
+  note_created: 'Nota foi criada.'
+  save: 'Salvar'

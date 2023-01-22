@@ -1,2 +1,2 @@
-json.extract! note, :id, :title, :content, :author, :color, :created_at, :updated_at
+json.extract! note, :id, :title, :content, :color, :author_id, :created_at, :updated_at
 json.url note_url(note, format: :json)
